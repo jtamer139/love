@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Birthday</title>
+  <link rel="stylesheet" href="./static/style.css">
+  <script src="./static/script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="home">
+
+<audio id="music" loop playsinline preload="metadata">
+   <source src="./static/birthday.m4a" type="audio/mp4">
+   <source src="./static/birthday.m4a" type="audio/mpeg">
+</audio>
+
+<div class="balloon-container"></div>
+
+<div class="container">
+  <h2>Happy Birthday Our Favourite One🎂</h2>
+
+  <div class="music-box">
+    <p class="music-text"> Tap the button and listen 🎧</p>
+    <button class="play-btn" onclick="playSong()">▶</button>
+  </div>
+
+  <audio id="song" playsinline preload="metadata">
+    <source src="./static/birthday.m4a" type="audio/mp4">
+    <source src="./static/birthday.m4a" type="audio/mpeg">
+  </audio>
+</div>
+
+<a href="reasons.html" class="start-btn">
+  Enter The Celebration →
+</a>
+
+</body>
+</html>
+

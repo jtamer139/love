@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <title>Content</title>
+  <link rel="stylesheet" href="./static/style.css">
+</head>
+<body class="content">
+<canvas class="sparkles"></canvas>
+<audio id="music" loop playsinline preload="metadata">
+  <source src="./static/swa.mp4" type="audio/mp4">
+  <source src="./static/swa.mp4" type="audio/mpeg">
+</audio>
+
+<header class="content-header">
+  <nav class="side-nav">
+    <a href="home.html">Home</a>
+    <a href="#music-player">Music</a>
+    <a href="#book-section">Our Book</a>
+    <a href="#plans">Plans</a>
+    <a href="#messages-section">Messages</a>
+  </nav>
+</header>
+
+<!-- Balloon Container -->
+<div class="balloon-container"></div>
+
+<!-- Music Section -->
+<section id="music-player">
+  <div class="spotify-box">
+    <div class="spotify-header">
+      <i class="fas fa-music"></i>
+      <h3>Celebration Music 🎵</h3>
+    </div>
+    <div class="spotify-player">
+      <div class="album-art">
+        <i class="fas fa-compact-disc"></i>
+      </div>
+      <div class="player-info">
+        <h4>YOU BELONG WITH ME</h4>
+        <p>Fella & Marcus</p>
+      </div>
+      <div class="small-image">
+        <img src="./static/images/(8).jpeg" alt="Small Pic">
+      </div>
+      <div class="small-image">
+        <img src="./static/images/(10).jpeg" alt="Small Pic">
+      </div>
+      <div class="player-controls">
+        <button class="control-btn" id="playMusicBtn" onclick="toggleMusicPlayer()">
+          <i class="fas fa-play"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Book Section -->
+<section id="book-section" class="book-hero">
+  <div class="book-section-inner">
+    <h2 class="book-section-title">Our Book</h2>
+    <p class="book-section-sub"> FAV MEMORIES</p>
+    <div class="book-wrap">
+
+      <!-- Closed Book -->
+      <div class="book-closed" id="bookClosed" aria-label="افتح الكتاب">
+        <div class="book-3d">
+          <div class="book-spine"></div>
+          <div class="book-cover">
+            <span class="book-title">Our Moments</span>
+            <span class="book-heart">♥</span>
+          </div>
+          <div class="book-edge"></div>
+        </div>
+      </div>
+
+      <!-- Open Book -->
+      <div class="book-open" id="bookOpen">
+        <div class="book-viewer">
+        <div class="book-spread" id="bookSpread">
+          <div class="page-flip-left-wrap" id="pageFlipLeftWrap">
+            <div class="page page-left" id="pageLeft">
+              <img src="./static/images/(1).jpeg" alt="left page" id="imgLeft">
+            </div>
+            <div class="page page-left-back" id="pageLeftBack">
+              <img src="./static/images/(2).jpeg" alt="left page back" id="imgLeftBack">
+            </div>
+          </div>
+            <div class="page-flip-wrap" id="pageFlipWrap">
+              <div class="page page-right" id="pageRight">
+                <img src="./static/images/(2).jpeg" alt="right page" id="imgRight">
+              </div>
+              <div class="page page-right-back" id="pageRightBack">
+                <img src="./static/images/(3).jpeg" alt="right page back" id="imgRightBack">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="book-controls">
+          <button type="button" class="book-btn book-prev" id="bookPrev" aria-label="previous"><i class="fas fa-arrow-left"></i></button>
+          <span class="book-progress" id="bookProgress">1 / 4</span>
+          <button type="button" class="book-btn book-next" id="bookNext" aria-label="next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Timeline / Steps -->
+<section class="love-plan">
+  <h2>Our Special Day 💜</h2>
+  <div class="timeline-curve">
+    <svg class="curve-line" viewBox="0 0 800 200">
+      <path d="M50 150 C200 20 600 20 750 150" />
+    </svg>
+    <div class="step step1" data-text="💌 Morning Message">1</div>
+    <div class="step step2" data-text="🎁 Small Surprise">2</div>
+    <div class="step step3" data-text="🌸 Go Out Together">3</div>
+    <div class="step step4" data-text="🎂 Birthday Celebration">4</div>
+    <div class="step step5" data-text="✨ Midnight Wish">5</div>
+  </div>
+  <canvas class="sparkles"></canvas>
+</section>
+
+<!-- Messages -->
+<section id="messages-section">
+  <h2> I Love You More Than Words can describe</h2>
+  <div class="messages-container">
+    <div class="message-box dodo-box">
+      <div class="message-overlay">
+        <h3>From ur love 💕</h3>
+        <p>Click to reveal</p>
+      </div>
+      <p id="dodo-text" class="message-text"></p>
+    </div>
+  </div>
+</section>
+
+<script src="./static/script.js"></script>
+</body>
+</html>
